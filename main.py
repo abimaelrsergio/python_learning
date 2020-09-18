@@ -1,5 +1,5 @@
 print('#######################')
-print('# Ask To Oraculo Game #')
+print('# Ask To Oráculo Game #')
 print('#######################')
 
 sequencia_numerica = 43
