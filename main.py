@@ -3,7 +3,7 @@ print('# Ask To Oráculo Game #')
 print('#######################')
 
 sequencia_numerica = 43
-numero_jogadas = 3
+numero_jogadas = 4
 round = 1
 
 while(round <= numero_jogadas):
