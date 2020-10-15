@@ -6,7 +6,7 @@ sequencia_numerica = 43
 numero_jogadas = 4
 round = 1
 
-while(round <= numero_jogadas):
+for round in range(1, numero_jogadas):
     print('jogada {} de {}'.format(round, numero_jogadas))
     tentativa = int(input('Adivinhe a sequência numérica, digite um número:'))
     print('Você digitou:', tentativa)
@@ -24,5 +24,4 @@ while(round <= numero_jogadas):
             print('Sua sugetão foi menor do que a sequência numérica')
         print('Infelizmente, vocẽ não acertou.')
     print('----------------')
-    round = round + 1
 print('Game Over!')
