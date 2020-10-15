@@ -6,7 +6,7 @@ sequencia_numerica = 43
 numero_jogadas = 4
 round = 1
 
-for round in range(1, numero_jogadas):
+for round in range(1, numero_jogadas + 1):
     print('jogada {} de {}'.format(round, numero_jogadas))
     tentativa = int(input('Adivinhe a sequência numérica, digite um número:'))
     print('Você digitou:', tentativa)
