@@ -5,8 +5,18 @@ print('# Ask To Oráculo Game #')
 print('#######################')
 
 sequencia_numerica = random.randrange(1, 101)
-numero_jogadas = 4
-round = 1
+numero_jogadas = 0
+
+print('Qual nível de dificuldade? ')
+print('(1) Fácil (2) Médio (3) Difícil')
+nivel = int(input('Selecione o grau de dificuldade: '))
+
+if nivel == 1:
+    numero_jogadas = 17
+elif nivel == 2:
+    numero_jogadas = 9
+else:
+    numero_jogadas = 4
 
 for round in range(1, numero_jogadas + 1):
     print('jogada {} de {}'.format(round, numero_jogadas))
