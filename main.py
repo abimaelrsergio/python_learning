@@ -6,6 +6,7 @@ print('#######################')
 
 sequencia_numerica = random.randrange(1, 101)
 numero_jogadas = 0
+points = 850
 
 print('Qual nível de dificuldade? ')
 print('(1) Fácil (2) Médio (3) Difícil')
@@ -40,5 +41,7 @@ for round in range(1, numero_jogadas + 1):
         elif numero_menor:
             print('Sua sugetão foi menor do que a sequência numérica')
         print('Infelizmente, vocẽ não acertou.')
+        lost_points = abs(sequencia_numerica - tentativa)
+        points = points - lost_points
     print('----------------')
 print('Game Over!')
