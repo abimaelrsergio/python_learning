@@ -1,3 +1,6 @@
+import forca
+import oraculo
+
 print('#####################')
 print('# Selecione um jogo #')
 print('#####################')
@@ -7,5 +10,8 @@ game = int(input('> '))
 
 if game == 1:
     print('Forca')
+    play_forca()
 elif game == 2:
     print('Oráculo')
+    play_oraculo()
+
