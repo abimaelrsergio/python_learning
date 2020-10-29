@@ -33,7 +33,7 @@ for round in range(1, numero_jogadas + 1):
     numero_menor = tentativa < sequencia_numerica
 
     if adivinhou:
-        print('Adivinhou, parabéns!')
+        print('Adivinhou, parabéns!, Ganhou {} pontos'.format(points))
         break
     else:
         if numero_maior:
