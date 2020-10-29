@@ -10,8 +10,8 @@ game = int(input('> '))
 
 if game == 1:
     print('Forca')
-    play_forca()
+    forca.play_forca()
 elif game == 2:
     print('Oráculo')
-    play_oraculo()
+    oraculo.play_oraculo()
 
