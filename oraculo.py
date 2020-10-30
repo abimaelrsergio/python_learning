@@ -46,3 +46,9 @@ def play_oraculo():
             points = points - lost_points
         print('----------------')
     print('Game Over!')
+
+
+if __name__ == '__main__':
+    play_oraculo()
+
+
