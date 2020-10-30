@@ -4,10 +4,15 @@ def play_forca():
     print('# Game of Forca #')
     print('#################')
 
-    palavar_para_adivinhar = 'impressora'
+    palavra_para_adivinhar = 'impressora'
     enforcado = False
     ganhou = False
+
     while not enforcado and not ganhou:
+        tentativa = input('Informe uma letra: ')
+        for letra in palavra_para_adivinhar:
+            if tentativa == letra:
+                print(letra)
         print('jogando...')
 
     print('Fim do jogo')
