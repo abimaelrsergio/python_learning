@@ -5,18 +5,19 @@ def play_forca():
     print('#################')
 
     palavra_para_adivinhar = 'impressora'
+    acertos = ['_','_','_','_','_','_','_','_','_','_']
     enforcado = False
     ganhou = False
-
+    print(acertos)
     while not enforcado and not ganhou:
         tentativa = input('Informe uma letra: ')
         tentativa = tentativa.strip()
         indice = 0
         for letra in palavra_para_adivinhar:
             if tentativa.upper() == letra.upper():
-                print('Encontrada a letra: {}, no indice: {}'.format(letra, indice))
+                acertos[indice] = tentativa
             indice = indice + 1
-        print('jogando...')
+        print(acertos)
 
     print('Fim do jogo')
 
