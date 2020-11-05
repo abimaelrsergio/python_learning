@@ -5,7 +5,7 @@ def play_forca():
     print('#################')
 
     palavra_para_adivinhar = 'impressora'.upper()
-    acertos = ['_','_','_','_','_','_','_','_','_','_']
+    acertos = ['_' for letra in palavra_para_adivinhar]
     enforcado = False
     total_tentativas = 0
     ganhou = False
