@@ -22,6 +22,7 @@ def play_forca():
         else:
             total_tentativas += 1
         enforcado = total_tentativas == 7
+        ganhou = '_' not in acertos
         print(acertos)
 
     print('Fim do jogo')
