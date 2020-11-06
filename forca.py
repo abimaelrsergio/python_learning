@@ -15,14 +15,74 @@ def play_forca():
             armazenar_acertos(acertos, palavra_para_adivinhar, tentativa)
         else:
             total_tentativas += 1
+            enforcando(total_tentativas)
         enforcado = total_tentativas == 7
         ganhou = '_' not in acertos
         print(acertos)
     if ganhou:
-        print('Parabéns, ganhou o jogo!')
+        mostrar_msg_sucesso()
     else:
-        print('Perdeu!')
+        mostrar_msg_falha()
     print('Fim do jogo')
+
+
+def enforcando(total_tentativas):
+    print(" _______ ")
+    print(" |/ | ")
+
+    if(total_tentativas == 1):
+        print(" | (_) ")
+        print(" |    ")
+        print(" |    ")
+        print(" |    ")
+
+    if(total_tentativas == 2):
+        print(" | (_) ")
+        print(" | \ ")
+        print(" |    ")
+        print(" |    ")
+
+    if(total_tentativas == 3):
+        print(" | (_) ")
+        print(" | \| ")
+        print(" |    ")
+        print(" |    ")
+
+    if(total_tentativas == 4):
+        print(" | (_) ")
+        print(" | \|/ ")
+        print(" |    ")
+        print(" |    ")
+
+    if(total_tentativas == 5):
+        print(" | (_) ")
+        print(" | \|/ ")
+        print(" |  | ")
+        print(" |    ")
+
+    if(total_tentativas == 6):
+        print(" | (_) ")
+        print(" | \|/ ")
+        print(" |  | ")
+        print(" | / ")
+
+    if (total_tentativas == 7):
+        print(" | (_) ")
+        print(" | \|/ ")
+        print(" |  | ")
+        print(" | / \ ")
+
+    print(" | ")
+    print("_|___  ")
+    print()
+
+
+def mostrar_msg_falha():
+    print('Perdeu!')
+
+
+def mostrar_msg_sucesso():
+    print('Parabéns, ganhou o jogo!')
 
 
 def armazenar_acertos(acertos, palavra_para_adivinhar, tentativa):
