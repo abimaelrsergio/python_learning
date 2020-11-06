@@ -12,11 +12,7 @@ def play_forca():
     while not enforcado and not ganhou:
         tentativa = solicitar_tentativa()
         if tentativa in palavra_para_adivinhar:
-            indice = 0
-            for letra in palavra_para_adivinhar:
-                if tentativa == letra:
-                    acertos[indice] = tentativa
-                indice += 1
+            armazenar_acertos(acertos, palavra_para_adivinhar, tentativa)
         else:
             total_tentativas += 1
         enforcado = total_tentativas == 7
@@ -27,6 +23,14 @@ def play_forca():
     else:
         print('Perdeu!')
     print('Fim do jogo')
+
+
+def armazenar_acertos(acertos, palavra_para_adivinhar, tentativa):
+    indice = 0
+    for letra in palavra_para_adivinhar:
+        if tentativa == letra:
+            acertos[indice] = tentativa
+        indice += 1
 
 
 def solicitar_tentativa():
