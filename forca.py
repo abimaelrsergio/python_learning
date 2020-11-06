@@ -1,9 +1,8 @@
 import random
 
 def play_forca():
-    print('#################')
-    print('# Game of Forca #')
-    print('#################')
+
+    boas_vindas()
 
     lista_palavras = []
     file = open('arquivo.txt','r')
@@ -38,6 +37,12 @@ def play_forca():
     else:
         print('Perdeu!')
     print('Fim do jogo')
+
+
+def boas_vindas():
+    print('#################')
+    print('# Game of Forca #')
+    print('#################')
 
 
 if __name__ == '__main__':
