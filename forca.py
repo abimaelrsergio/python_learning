@@ -4,6 +4,14 @@ def play_forca():
     print('# Game of Forca #')
     print('#################')
 
+    lista_palavras = []
+    file = open('arquivo.txt','r')
+    for line in file:
+        line = line.strip()
+        lista_palavras.append(line)
+    file.close()
+    print(lista_palavras)
+
     palavra_para_adivinhar = 'impressora'.upper()
     acertos = ['_' for letra in palavra_para_adivinhar]
     enforcado = False
