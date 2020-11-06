@@ -3,15 +3,14 @@ import random
 def play_forca():
     boas_vindas()
     palavra_para_adivinhar = buscar_palavras_adivinhar()
+    acertos = inicializar_acertos(palavra_para_adivinhar)
 
-    acertos = ['_' for letra in palavra_para_adivinhar]
     enforcado = False
     total_tentativas = 0
     ganhou = False
     print(acertos)
     while not enforcado and not ganhou:
-        tentativa = input('Informe uma letra: ')
-        tentativa = tentativa.strip().upper()
+        tentativa = solicitar_tentativa()
         if tentativa in palavra_para_adivinhar:
             indice = 0
             for letra in palavra_para_adivinhar:
@@ -28,6 +27,16 @@ def play_forca():
     else:
         print('Perdeu!')
     print('Fim do jogo')
+
+
+def solicitar_tentativa():
+    tentativa = input('Informe uma letra: ')
+    tentativa = tentativa.strip().upper()
+    return tentativa
+
+
+def inicializar_acertos(palavra_para_adivinhar):
+    return ['_' for letra in palavra_para_adivinhar]
 
 
 def buscar_palavras_adivinhar():
