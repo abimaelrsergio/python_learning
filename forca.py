@@ -1,18 +1,9 @@
 import random
 
 def play_forca():
-
     boas_vindas()
+    palavra_para_adivinhar = buscar_palavras_adivinhar()
 
-    lista_palavras = []
-    file = open('arquivo.txt','r')
-    for line in file:
-        line = line.strip()
-        lista_palavras.append(line)
-    file.close()
-
-    posicao_lista = random.randrange(0, len(lista_palavras))
-    palavra_para_adivinhar = lista_palavras[posicao_lista].upper()
     acertos = ['_' for letra in palavra_para_adivinhar]
     enforcado = False
     total_tentativas = 0
@@ -37,6 +28,19 @@ def play_forca():
     else:
         print('Perdeu!')
     print('Fim do jogo')
+
+
+def buscar_palavras_adivinhar():
+    lista_palavras = []
+    file = open('arquivo.txt', 'r')
+    for line in file:
+        line = line.strip()
+        lista_palavras.append(line)
+    file.close()
+
+    posicao_lista = random.randrange(0, len(lista_palavras))
+    palavra_para_adivinhar = lista_palavras[posicao_lista].upper()
+    return palavra_para_adivinhar
 
 
 def boas_vindas():
