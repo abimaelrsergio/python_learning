@@ -1,3 +1,4 @@
+import random
 
 def play_forca():
     print('#################')
@@ -10,9 +11,9 @@ def play_forca():
         line = line.strip()
         lista_palavras.append(line)
     file.close()
-    print(lista_palavras)
 
-    palavra_para_adivinhar = 'impressora'.upper()
+    posicao_lista = random.randrange(0, len(lista_palavras))
+    palavra_para_adivinhar = lista_palavras[posicao_lista].upper()
     acertos = ['_' for letra in palavra_para_adivinhar]
     enforcado = False
     total_tentativas = 0
